@@ -1,13 +1,10 @@
-class MatriculaWeb(object):
+class Departament(object):
 
-    cod = 0
+    cod = ""
+    initials = 0
     name = ""
 
-class Departament(MatriculaWeb):
-
-    initials = ""
-
-class Subjects(MatriculaWeb):
+class Subject(Departament):
 
     list_names = []
     list_cods = []
