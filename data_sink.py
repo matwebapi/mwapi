@@ -1,17 +1,16 @@
 from pipers import Pipers
+import json
 
-class Data_Sink(Pipers):
+class DataSinkSubject(Pipers):
 
-    """
+    def write(subjects):
 
-    data = {
-        "subjects": {
-            "CODIGO": subjects.list_cods,
-            "MATERIA": subjects.list_names
+        data = {
+            "subjects": {
+                "CODIGO": subjects.list_cods,
+                "MATERIA": subjects.list_names
+            }
         }
-    }
 
-    "Gera JSON"
-    with open("data_file.json", "w") as write_file:
-        json.dump(data, write_file)
-    """
+        with open("disciplinas_fga.json", "w") as write_file:
+            json.dump(data, write_file)

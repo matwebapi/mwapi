@@ -37,3 +37,5 @@ class DataSourceSubject(Pipers):
         subject.list_codes = filter_subjects.remove_vogals(list_subjects)
         subject.list_names = filter_subjects.remove_cod_of_list_name(subject.list_codes, list_subjects)
         subject.list_names = filter_subjects.remove_accents(subject.list_names)
+
+        return subject
