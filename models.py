@@ -2,6 +2,8 @@ class Subject(object):
 
     list_names = []
     list_cods = []
+    cod_departament = 0
+    name_departament = ""
 
 class Departament(object):
 

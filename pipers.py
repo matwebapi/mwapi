@@ -5,11 +5,11 @@ class Pipers(object):
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def read(self):
+    def read(url,type):
 
         pass
 
     @abstractmethod
-    def write(object):
+    def write(object,type):
 
         pass
