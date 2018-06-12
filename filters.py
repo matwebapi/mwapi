@@ -28,16 +28,65 @@ class FilterSubjects(object):
 
         return list_codes
 
+    def remove_letter_e(list):
+
+        list_codes = [aux for aux in list if "E" not in aux]
+
+        return list_codes
+
+    def remove_letter_i(list):
+
+        list_codes = [aux for aux in list if "I" not in aux]
+
+        return list_codes
+
     def remove_letter_o(list):
 
         list_codes = [aux for aux in list if "O" not in aux]
 
         return list_codes
 
+    def remove_letter_u(list):
+
+        list_codes = [aux for aux in list if "U" not in aux]
+
+        return list_codes
+
+    def remove_letter_c(list):
+
+        list_codes = [aux for aux in list if "C" not in aux]
+
+        return list_codes
+
+    def remove_letter_p(list):
+
+        list_codes = [aux for aux in list if "P" not in aux]
+
+        return list_codes
+
+    def remove_letter_f(list):
+
+        list_codes = [aux for aux in list if "F" not in aux]
+
+        return list_codes
+
+    def remove_initials(list):
+
+        list_C = FilterSubjects.remove_letter_c(list)
+        list_P = FilterSubjects.remove_letter_p(list_C)
+        list_F = FilterSubjects.remove_letter_f(list_P)
+        list_final = list_F
+
+        return list_final
+
     def remove_vogals(list):
 
         list_A = FilterSubjects.remove_letter_a(list)
-        list_final = FilterSubjects.remove_letter_o(list_A)
+        list_E = FilterSubjects.remove_letter_e(list_A)
+        list_I = FilterSubjects.remove_letter_i(list_E)
+        list_O = FilterSubjects.remove_letter_o(list_I)
+        list_U = FilterSubjects.remove_letter_u(list_O)
+        list_final = list_U
 
         return list_final
 
@@ -59,6 +108,37 @@ class FilterSubjects(object):
         list_names = [x.replace('Õ', 'O') for x in list_names]
         list_names = [x.replace('Ô', 'O') for x in list_names]
         list_names = [x.replace('Ó', 'O') for x in list_names]
+        list_names = [x.replace('Ú', 'U') for x in list_names]
         list_names = [x.replace('Ç', 'C') for x in list_names]
+
+        return list_names
+
+    def upper_words(list):
+
+        list = [x.upper() for x in list]
+
+        return list
+
+    def search_initials(list):
+
+        list_initials = []
+
+        for aux in range(len(list)):
+
+            if aux % 2 == 0:
+
+                list_initials.append(list[aux])
+
+        return list_initials
+
+    def search_names(list):
+
+        list_names = []
+
+        for aux in range(len(list)):
+
+            if aux % 2 != 0:
+
+                list_names.append(list[aux])
 
         return list_names

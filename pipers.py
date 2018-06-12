@@ -10,6 +10,6 @@ class Pipers(object):
         pass
 
     @abstractmethod
-    def write(self):
+    def write(object):
 
         pass
