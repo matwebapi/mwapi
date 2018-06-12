@@ -1,4 +1,4 @@
-class FilterSubjects(object):
+class Filter(object):
 
     def blank_space(list):
 
@@ -72,20 +72,20 @@ class FilterSubjects(object):
 
     def remove_initials(list):
 
-        list_C = FilterSubjects.remove_letter_c(list)
-        list_P = FilterSubjects.remove_letter_p(list_C)
-        list_F = FilterSubjects.remove_letter_f(list_P)
+        list_C = Filter.remove_letter_c(list)
+        list_P = Filter.remove_letter_p(list_C)
+        list_F = Filter.remove_letter_f(list_P)
         list_final = list_F
 
         return list_final
 
     def remove_vogals(list):
 
-        list_A = FilterSubjects.remove_letter_a(list)
-        list_E = FilterSubjects.remove_letter_e(list_A)
-        list_I = FilterSubjects.remove_letter_i(list_E)
-        list_O = FilterSubjects.remove_letter_o(list_I)
-        list_U = FilterSubjects.remove_letter_u(list_O)
+        list_A = Filter.remove_letter_a(list)
+        list_E = Filter.remove_letter_e(list_A)
+        list_I = Filter.remove_letter_i(list_E)
+        list_O = Filter.remove_letter_o(list_I)
+        list_U = Filter.remove_letter_u(list_O)
         list_final = list_U
 
         return list_final

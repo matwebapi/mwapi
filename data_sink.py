@@ -1,20 +1,6 @@
 from pipers import Pipers
 import json
 
-class DataSinkSubjectFGA(Pipers):
-
-    def write(subjects):
-
-        data = {
-            "DISCIPLINAS": {
-                "CODIGO": subjects.list_cods,
-                "MATERIA": subjects.list_names
-            }
-        }
-
-        with open("disciplinas_fga.json", "w") as write_file:
-            json.dump(data, write_file)
-
 class DataSinkDepartamentGama(Pipers):
 
     def write(departament):
@@ -27,7 +13,21 @@ class DataSinkDepartamentGama(Pipers):
             }
         }
 
-        with open("departamentos_gama.json", "w") as write_file:
+        with open("DEPARTAMENTOS_GAMA.json", "w") as write_file:
+            json.dump(data, write_file)
+
+class DataSinkSubjectFGA(Pipers):
+
+    def write(subjects):
+
+        data = {
+            "DISCIPLINAS_FGA": {
+                "CODIGO": subjects.list_cods,
+                "MATERIA": subjects.list_names
+            }
+        }
+
+        with open("DISCIPLINAS_FGA.json", "w") as write_file:
             json.dump(data, write_file)
 
 class DataSinkDepartamentCeilandia(Pipers):
@@ -42,7 +42,21 @@ class DataSinkDepartamentCeilandia(Pipers):
             }
         }
 
-        with open("departamentos_ceilandia.json", "w") as write_file:
+        with open("DEPARTAMENTOS_CEILANDIA.json", "w") as write_file:
+            json.dump(data, write_file)
+
+class DataSinkSubjectFCE(Pipers):
+
+    def write(subjects):
+
+        data = {
+            "DISCIPLINAS_FCE": {
+                "CODIGO": subjects.list_cods,
+                "MATERIA": subjects.list_names
+            }
+        }
+
+        with open("DISCIPLINAS_FCE.json", "w") as write_file:
             json.dump(data, write_file)
 
 class DataSinkDepartamentPlanaltina(Pipers):
@@ -57,7 +71,21 @@ class DataSinkDepartamentPlanaltina(Pipers):
             }
         }
 
-        with open("departamentos_planaltina.json", "w") as write_file:
+        with open("DEPARTAMENTOS_PLANALTINA.json", "w") as write_file:
+            json.dump(data, write_file)
+
+class DataSinkSubjectFUP(Pipers):
+
+    def write(subjects):
+
+        data = {
+            "DISCIPLINAS_FCE": {
+                "CODIGO": subjects.list_cods,
+                "MATERIA": subjects.list_names
+            }
+        }
+
+        with open("DISCIPLINAS_FUP.json", "w") as write_file:
             json.dump(data, write_file)
 
 class DataSinkDepartamentDarcy(Pipers):
@@ -72,5 +100,5 @@ class DataSinkDepartamentDarcy(Pipers):
             }
         }
 
-        with open("departamentos_darcy.json", "w") as write_file:
+        with open("DEPARTAMENTOS_DARCY.json", "w") as write_file:
             json.dump(data, write_file)
