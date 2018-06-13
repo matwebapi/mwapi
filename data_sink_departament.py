@@ -5,22 +5,23 @@ class DataSinkDepartament(Pipers):
 
     def write(departament,type):
 
-        if (type < 3):
+        if (type == "DARCY"):
+
+            data = {
+                "DEPARTAMENTOS_" + departament.initials: {
+                    "CODIGO": departament.list_cods,
+                    "SIGLA": departament.list_initials,
+                    "DENOMINACAO": departament.list_names
+                }
+            }
+
+        else:
 
             data = {
                 "DEPARTAMENTOS_" + departament.initials: {
                     "CODIGO": departament.cod,
                     "SIGLA": departament.initials,
                     "DENOMINACAO": departament.name
-                }
-            }
-        else:
-
-            data = {
-                "DEPARTAMENTOS_DARCY_RIBEIRO": {
-                    "CODIGO": departament.list_cods,
-                    "SIGLA": departament.list_initials,
-                    "DENOMINACAO": departament.list_names
                 }
             }
 

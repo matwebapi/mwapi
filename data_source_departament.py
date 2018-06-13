@@ -28,19 +28,19 @@ class DataSourceDepartament(Pipers):
         list_content = filter_subjects.remove_accents(list_content)
         departament.cod = list_content[0]
 
-        if (type == FGA):
+        if (type == "FGA"):
 
             departament.name = "UnB - Faculdade do Gama"
             departament.initials = "FGA"
             departament.name.upper()
 
-        elif (type == FCE):
+        elif (type == "FCE"):
 
             departament.name = "UnB - Faculdade do Ceilandia"
             departament.initials = "FCE"
             departament.name.upper()
 
-        elif (type == FUP) :
+        elif (type == "FUP") :
 
             departament.name = "UnB - Faculdade do Planaltina"
             departament.initials = "FUP"
@@ -48,6 +48,7 @@ class DataSourceDepartament(Pipers):
 
         else:
 
+            type = "DARCY"
             request = requests.get(url)
             soup = BeautifulSoup(request.content, "html.parser")
             filter_subjects = Filter
@@ -70,6 +71,6 @@ class DataSourceDepartament(Pipers):
             departament.list_cods = list_cods
             departament.list_initials = list_initials
             departament.list_names = filter_subjects.remove_accents(list_names)
-            departament.initials = "Darcy"
+            departament.initials = type
 
         return departament
