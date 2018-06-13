@@ -5,7 +5,7 @@ class Pipers(object):
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def read(url,type):
+    def read(url,type,cod):
 
         pass
 
