@@ -1,14 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 from models import Departament
-from pipers import Pipers
+from pipe import Pipe
 from filters import Filter
 
-FGA = 0
-FCE = 1
-FUP = 2
-
-class DataSourceDepartament(Pipers):
+class DataSourceDepartament(Pipe):
 
     def read(url,type):
 
