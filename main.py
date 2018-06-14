@@ -20,11 +20,12 @@ def run ():
                                                  str(list_departaments_numbers[aux]), list_departaments[aux])
         DataSinkDepartament.write(departament, list_departaments[aux])
 
-        for new_aux in range(len(list_departaments_cods)):
+    for new_aux in range(len(list_departaments_cods)):
 
-            subjects = DataSourceSubject.read("https://matriculaweb.unb.br/graduacao/oferta_dis.aspx?cod=" +
-                                              str(list_departaments_cods[new_aux]),list_departaments[new_aux])
-            DataSinkSubject.write(subjects)
+        subjects = DataSourceSubject.read("https://matriculaweb.unb.br/graduacao/oferta_dis.aspx?cod=" +
+                                              str(list_departaments_cods[new_aux]), new_aux)
+        DataSinkSubject.write(subjects)
+
 
     subjects_darcy = DataSourceDepartament.read("https://matriculaweb.unb.br/graduacao/oferta_dep.aspx?cod=" +
                                                 str(list_departaments_numbers[3]),list_departaments[3])
