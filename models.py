@@ -14,3 +14,10 @@ class Departament(object):
     list_cods = []
     list_names = []
     list_initials = []
+
+class Courses(object):
+
+    cod = 0
+    modality = ""
+    name = ""
+    shift = ""
