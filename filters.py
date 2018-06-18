@@ -142,3 +142,18 @@ class Filter(object):
                 list_names.append(list[aux])
 
         return list_names
+
+    def get_modalities(list):
+
+        list_modalities = []
+        modality_position = 0
+        counter = 0
+
+        for aux in range(len(list)):
+            if counter == modality_position:
+                list_modalities.append(list[aux])
+                modality_position += 4
+
+            counter+= 1
+
+        return list_modalities
