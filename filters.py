@@ -157,3 +157,18 @@ class Filter(object):
             counter+= 1
 
         return list_modalities
+
+    def get_shift(list):
+
+        list_shift = []
+        shift_position = 3
+        counter = 0
+
+        for aux in range(len(list)):
+            if counter == shift_position:
+                list_shift.append(list[aux])
+                shift_position += 4
+
+            counter+= 1
+
+        return list_shift
