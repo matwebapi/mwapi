@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-class Pipers(object):
+class Pipe(object):
 
     __metaclass__ = ABCMeta
 

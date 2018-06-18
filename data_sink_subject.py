@@ -1,7 +1,7 @@
-from pipers import Pipers
+from pipe import Pipe
 import json
 
-class DataSinkSubject(Pipers):
+class DataSinkSubject(Pipe):
 
     def write(subjects):
 

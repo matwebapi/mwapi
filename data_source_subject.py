@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 from models import Subject
-from pipers import Pipers
+from pipe import Pipe
 from filters import Filter
 
-class DataSourceSubject(Pipers):
+class DataSourceSubject(Pipe):
 
     def read(url,type):
 
@@ -56,7 +56,7 @@ class DataSourceSubject(Pipers):
 
         return subject
 
-class DataSourceSubjectsDarcy(Pipers):
+class DataSourceSubjectsDarcy(Pipe):
 
     def read(url,type,cod):
 
