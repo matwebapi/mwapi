@@ -172,3 +172,18 @@ class Filter(object):
             counter+= 1
 
         return list_shift
+
+    def get_names(list):
+
+        list_names = []
+        name_position = 2
+        counter = 0
+
+        for aux in range(len(list)):
+            if counter == name_position:
+                list_names.append(list[aux])
+                name_position += 4
+
+            counter+= 1
+
+        return list_names

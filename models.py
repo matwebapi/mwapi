@@ -17,7 +17,7 @@ class Departament(object):
 
 class Courses(object):
 
-    cod = 0
-    modality = ""
-    name = ""
-    shift = ""
+    codes = []
+    modalities = []
+    names = []
+    list_shift = []
